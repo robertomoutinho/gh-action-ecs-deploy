@@ -1,0 +1,34 @@
+# action.yml
+name: 'ECS deploy'
+description: 'Github action using fabfuel/ecs-deploy for ECS'
+inputs:
+    ecs_cluster:
+        description: 'The ECS cluster name where to deploy'
+        required: true
+    ecs_service:
+        description: 'The ECS service name where to deploy'
+        required: true
+    ecs_container_name:
+        description: 'The container name to be updated'
+        required: true
+    app_repo_url:
+        description: 'The app docker repository URL'
+        required: true
+    app_version:
+        description: 'The docker image tag to deploy'
+        required: true
+    aws_region:
+        description: 'The aws region'
+        required: true
+    aws_access_key_id:
+        description: 'The aws access key id'
+        required: true
+    aws_secret_access_key:
+        description: 'The aws secret access key'
+        required: true
+outputs:
+    result:
+        description: 'Output provided by ecs deploy tool'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
