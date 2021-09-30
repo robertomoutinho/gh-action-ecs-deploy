@@ -1,6 +1,6 @@
 #!/bin/sh -le
 
-echo "Deploying $INPUT_ECS_SERVICE to Cluster $INPUT_ECS_CLUSTER with version: $INPUT_APP_VERSION"
+echo "Deploying: $INPUT_ECS_SERVICE to cluster: $INPUT_ECS_CLUSTER with version: $INPUT_APP_VERSION"
 
 result=$(ecs deploy $INPUT_ECS_CLUSTER $INPUT_ECS_SERVICE \
                 --no-deregister \
