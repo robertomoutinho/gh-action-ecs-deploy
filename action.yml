@@ -1,6 +1,9 @@
 # action.yml
 name: 'AWS ECS deploy'
 description: 'Github action using fabfuel/ecs-deploy for ECS'
+branding:
+  icon: 'cloud'
+  color: 'orange'
 inputs:
     ecs_cluster:
         description: 'The ECS cluster name where to deploy'
